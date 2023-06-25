@@ -1,0 +1,204 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="{% url 'course' %}">Courses</a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Service Start -->
+   <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
+                            <h5 class="mb-3">Malakali murabbiylar</h5><hr>
+                            <p>
+                            <ul>
+                                <li><b>Abdulqodir Homidov</b></li>
+                                <li><b>Dilshodbek Ahmedov</b></li>
+                                <li><b>Muzaffarbek Sattorov</b></li>
+                                <li><b>Shahzod Samariddinov</b></li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                            <h5 class="mb-3">Onlayn kurslar</h5><hr>
+                            <p>
+                            <ul>
+                                <li><b>Kompyuter savodxonligi</b></li>
+                                <li><b>Web Designer</b></li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
+                            <h5 class="mb-3">Loyihalar</h5><hr>
+                            <p>
+                            <ul>
+                            <li><b>MRIT</b></li>
+                            <li><b>ITPARK.UZ</b></li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
+                            <h5 class="mb-3">Kutibxonalar</h5><hr>
+                            <p>
+                            <ul>
+                            <li><b>IT_PARK</b></li>
+                            </ul></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+   <div class="container-xxl-py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{% static 'img/about.jpg' %}" alt="" style="object-fit: cover; border-radius: 25px;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="mb-4">Welcome to IT_PARK</h1>
+                    <p class="mb-4">2019-yil 24-iyulda Toshkentda Oʻzbekiston Respublikasidagi birinchi IT Park ochildi. Ushbu qisqa vaqt ichida IT Park 28 yangi startaplar koʻrinishidagi birinchi mevalarini berdi, axborot texnologiyalari sohasida oʻnlab loyihalarni yaratdi, shuningdek, yoshlarni ragʻbatlantirish, ushbu sohaga qiziqishi va aholida kompyuter savodxonligini rivojlantirish uchun treninglar, “vorkshop” va “mitap”lar yaratdi.</p>
+                    <p class="mb-4">IT Park – bu IT-kompaniyalar uchun istiqbolli boshlangʻich loyihalarni, tashqi iqtisodiy zonani, shu jumladan ilmiy va taʼlim tashkilotlari bilan integratsiyalashgan holda ishga tushirish va bozorga chiqarishni taʼminlash uchun moʻljallangan obyektlar, bino va inshootlar majmuasi. IT sohasida faol va iqtidorli insonlar buxgalteriya hisobi, yuridik, marketing va taʼlim orqali oʻz gʻoyalarini haqiqiy biznes loyihalariga aylantirish uchun haqiqiy imkoniyatga ega boʻladigan joy.</p>
+                    <div>
+                        <h4>Kurslar ro'xati</h4><hr>
+                    </div>
+                    <div class="row gy-2 gx-4 mb-4">
+                        {% for i in park %}
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{i.course}}</p><a><b>{{i.price}}</b></a><hr>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
+                <h1 class="mb-5">Expert Instructors</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/8.png' %}" alt=""  width="500" height="600" style="border-radius: 25px;">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Dilshodbek Ahmedov</h5>
+                            <small><b>Back-End dasturchi</b></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/7.png' %}" alt="" style="border-radius: 25px;">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Muzaffarbek Sattorov</h5>
+                            <small><b>Front-End dasturchi</b></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/3.png' %}" alt=""  width="500" height="600" style="border-radius: 25px;">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Abdulqodir Homidov</h5>
+                            <small><b>Web-dizayin va AuthoCAD mutaxasisi</b></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item bg-light">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/6.png' %}" alt=""  width="300" height="300" style="border-radius: 25px;">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Alisher Xujanov</h5>
+                            <small><b>Full-Stack dasturchi</b></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+        
+{% endblock %}

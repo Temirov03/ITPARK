@@ -1,0 +1,48 @@
+#direc {   
+    font-size: 20px;
+    border-radius: 250px;
+    background: transparent;
+    border: 4px solid aqua;
+}
+#name {
+    font-size: 20px;
+    border-radius: 250px;
+    background: transparent;
+    border: 4px solid aqua;
+}
+#seria {
+    font-size: 20px;
+    border-radius: 250px;
+    background: transparent;
+    border: 4px solid aqua;
+}
+#direction {
+    font-size: 20px;
+    border-radius: 250px;
+    background: transparent;
+    border: 4px solid aqua;
+}
+#phone {
+    font-size: 20px;
+    border-radius: 250px;
+    background: transparent;
+    border: 4px solid aqua;
+}
+#message {
+    font-size: 20px;
+    border-radius: 30px;
+    background: transparent;
+    border: 4px solid aqua;
+}
+
+div button:hover {
+    background: #fa4659;
+    color: #fff;
+    transition: 0.5s;
+}
+
+div input:hover {
+    background: #fa4659;
+    color: #fff;
+    transition: 0.5s;
+}
